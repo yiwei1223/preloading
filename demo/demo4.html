@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <title>测试preloading.css()</title>
+    </head>
+    <body>
+        <div>111</div>
+        <script src="../build/preloading.min.1.0.0.js"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                preloading.css([
+                    'css/index1.css',
+                    'css/index2.css'
+                ], function () {
+                    console.log('done');
+                });
+            };
+        </script>
+    </body>
+</html>

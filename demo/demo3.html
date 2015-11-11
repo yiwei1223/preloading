@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <title>测试preloading.js()</title>
+    </head>
+    <body>
+        <script src="../build/preloading.min.1.0.0.js"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                preloading.js([
+                    'http://static.game.xiaomi.com/pages/static/zepto.min.js',
+                    'http://static.game.xiaomi.com/pages/static/mi.flexible.js',
+                    'http://static.game.xiaomi.com/pages/static/plugin.slipPage2d.js',
+                    'js/demo1.js',
+                    'js/demo2.js'
+                ], function () {
+                    console.log('done');
+                });
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <title>测试preloading.img()</title>
+    </head>
+    <body>
+        <img src="img/demo.jpg" alt="" data-src="https://ss0.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3347536491,2771180012&fm=21&gp=0.jpg"/>
+        <img src="img/demo.jpg" alt="" data-src="https://ss0.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3406611444,4024189129&fm=21&gp=0.jpg"/>
+        <img src="img/demo.jpg" alt="" data-src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4016443836,1705192102&fm=21&gp=0.jpg"/>
+        <img src="img/demo.jpg" alt="" data-src="http://img1.imgtn.bdimg.com/it/u=4126969809,3313870532&fm=21&gp=0.jpg"/>
+        <img src="img/demo.jpg" alt="" data-src="http://img4.imgtn.bdimg.com/it/u=1000093241,3965212071&fm=21&gp=0.jpg"/>
+        <script src="http://static.game.xiaomi.com/pages/static/zepto.min.js"></script>
+        <script src="../build/preloading.min.1.0.0.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('img').forEach(function (item, index) {
+                    preloading.img([$(item).attr('data-src')], function () {
+                        $(item).attr('src', $(item).attr('data-src'));
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
