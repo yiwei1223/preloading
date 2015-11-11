@@ -1,5 +1,4 @@
 # preloading.js
-<hr>
 A Javascript(AMD, node)module realization picture && js && css preloaded
 
 
