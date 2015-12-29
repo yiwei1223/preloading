@@ -4,7 +4,7 @@ A Javascript(AMD, node)module realization picture && js && css preloaded
 
 #API
 	1）loading method achieve the page load performance
-	preloding.loading(files[], callback);
+	preloding.loading(files[], callback, callback);
 	
 	2) img method achieve the pictures dynamic loading
 	preloding.img(files[], callback);
