@@ -18,7 +18,9 @@
                     'https://ss0.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3321316650,3941132598&fm=21&gp=0.jpg',
                     'http://img1.imgtn.bdimg.com/it/u=4126969809,3313870532&fm=21&gp=0.jpg',
                     'http://img4.imgtn.bdimg.com/it/u=1000093241,3965212071&fm=21&gp=0.jpg'
-                ], function () {
+                ], function (len, curLen) {
+                    console.log(len, curLen);
+                }, function () {
                     $('.load').css('font-size', '60px');
                 });
             });

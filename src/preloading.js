@@ -58,7 +58,7 @@
          *
          * @desc loading
          */
-        loading: function (files, callback) {
+        loading: function (files, process, callback) {
             if (!detect(files)) return;
             var imgArr = [], // all need load imgs array
                 loadImageCompleted = 0; //当前已经加载的图片数
@@ -69,6 +69,7 @@
                 imgArr[j].onload = function () {
                     var len = imgArr.length;
                     loadImageCompleted ++;
+                    process && process(len, loadImageCompleted);
                     if (len === loadImageCompleted) {
                         callback && callback();
                     }
@@ -97,9 +98,9 @@
         script.src = path;
         document.body.appendChild(script);
         script.onload = script.onreadystatechange = function () {
-          if (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') {
-              callback && callback();
-          }
+            if (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') {
+                callback && callback();
+            }
         };
     }
 

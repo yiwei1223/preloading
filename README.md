@@ -20,7 +20,9 @@ A Javascript(AMD, node)module realization picture && js && css preloaded
 	preloading.loading([
 		'http://img1.imgtn.bdimg.com/it/u=4126969809,3313870532&fm=21&gp=0.jpg',
 		'http://img4.imgtn.bdimg.com/it/u=1000093241,3965212071&fm=21&gp=0.jpg'
-		], function () {
+		], function (len, curLen) {
+
+		},function () {
 			// to do something
 		});
 		
